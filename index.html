@@ -1,27 +1,19 @@
-<!DOCTYPE html>
-<html> 
 <head>
-<script type="text/javascript">
-var countdownnumber=30;
-var countdownid;
-function initial(){ countdownfunc(); }
-function countdownfunc(){
-var x=document.getElementById("countdown");
-x.innerHTML=countdownnumber;
-if (countdownnumber==0){ 
-clearTimeout(countdownid);
-}else{
-countdownnumber--;
-if(countdownid){
-clearTimeout(countdownid);
-}
-countdownid=setTimeout(countdownfunc,1000);
-}
-}
-</script>
+	<title></title>
 </head>
-<body onload="initial();">
-<p>倒數時間:</p>
-<div id="countdown"></div>
+<body>
+<script>
+function dogo(){
+  var urls = new Array();
+  urls[0] = "http://www.mysurvey.tw/s/ptBXTtC9";
+  urls[1] = "http://www.mysurvey.tw/s/ybmR8TPw";
+  urls[2] = "http://www.mysurvey.tw/s/W66Xws4r";
+  urls[3] = "http://www.mysurvey.tw/s/FpqtG4yz";
+  n = Math.floor(Math.random()*4);
+  location.href= urls[n];
+}
+
+dogo();
+</script>
 </body>
 </html>
